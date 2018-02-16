@@ -1,0 +1,1724 @@
+diff --git a/SESS b/SESS
+new file mode 100644
+index 0000000..e76c81a
+--- /dev/null
++++ b/SESS
+@@ -0,0 +1,1065 @@
++let SessionLoad = 1
++let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
++let v:this_session=expand("<sfile>:p")
++let EasyMotion_off_screen_search =  1 
++let EasyMotion_move_highlight =  1 
++let UltiSnipsExpandTrigger = "<tab>"
++let EasyMotion_use_migemo =  0 
++let EasyMotion_smartcase =  0 
++let UltiSnipsJumpForwardTrigger = "<c-j>"
++let EasyMotion_enter_jump_first =  0 
++let EasyMotion_use_upper =  0 
++let EasyMotion_do_mapping =  1 
++let EasyMotion_keys = "asdghklqwertyuiopzxcvbnmfj;"
++let UltiSnipsRemoveSelectModeMappings =  1 
++let EasyMotion_disable_two_key_combo =  0 
++let EasyMotion_show_prompt =  1 
++let EasyMotion_do_shade =  1 
++let EasyMotion_grouping =  1 
++let EasyMotion_inc_highlight =  1 
++let EasyMotion_skipfoldedline =  1 
++let UltiSnipsEnableSnipMate =  1 
++let EasyMotion_use_regexp =  1 
++let EasyMotion_verbose =  1 
++let EasyMotion_add_search_history =  1 
++let UltiSnipsJumpBackwardTrigger = "<c-k>"
++let NetrwMenuPriority =  80 
++let EasyMotion_cursor_highlight =  1 
++let UltiSnipsListSnippets = "<c-tab>"
++let EasyMotion_startofline =  1 
++let UltiSnipsEditSplit = "normal"
++let EasyMotion_force_csapprox =  0 
++let EasyMotion_loaded =  1 
++let NetrwTopLvlMenu = "Netrw."
++let EasyMotion_landing_highlight =  0 
++let EasyMotion_space_jump_first =  0 
++let EasyMotion_prompt = "Search for {n} character(s): "
++silent only
++cd ~/src/vim-python-parso-syntax.git
++if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
++  let s:wipebuf = bufnr('%')
++endif
++set shortmess=aoO
++badd +0 npps.py
++badd +57 ~/dotfiles/vim-spacetea/python/spacetea/plugin.py
++badd +6 ~/dotfiles/vim-spacetea/plugin/spacetea.vim
++badd +0 ~/dotfiles/vim-spacetea/autoload/spacetea.vim
++badd +0 plugin/npps.vim
++badd +0 ~/dotfiles/HOMELY.py
++badd +0 test.py
++badd +1 \ python3.4\ test.py
++argglobal
++silent! argdel *
++argadd npps.py
++edit plugin/npps.vim
++set splitbelow splitright
++wincmd _ | wincmd |
++vsplit
++1wincmd h
++wincmd _ | wincmd |
++split
++wincmd _ | wincmd |
++split
++2wincmd k
++wincmd w
++wincmd w
++wincmd w
++wincmd _ | wincmd |
++split
++wincmd _ | wincmd |
++split
++wincmd _ | wincmd |
++split
++3wincmd k
++wincmd w
++wincmd w
++wincmd w
++wincmd t
++set winminheight=1 winminwidth=1 winheight=1 winwidth=1
++exe '1resize ' . ((&lines * 35 + 41) / 82)
++exe 'vert 1resize ' . ((&columns * 88 + 138) / 276)
++exe '2resize ' . ((&lines * 1 + 41) / 82)
++exe 'vert 2resize ' . ((&columns * 88 + 138) / 276)
++exe '3resize ' . ((&lines * 42 + 41) / 82)
++exe 'vert 3resize ' . ((&columns * 88 + 138) / 276)
++exe '4resize ' . ((&lines * 18 + 41) / 82)
++exe 'vert 4resize ' . ((&columns * 187 + 138) / 276)
++exe '5resize ' . ((&lines * 8 + 41) / 82)
++exe 'vert 5resize ' . ((&columns * 187 + 138) / 276)
++exe '6resize ' . ((&lines * 9 + 41) / 82)
++exe 'vert 6resize ' . ((&columns * 187 + 138) / 276)
++exe '7resize ' . ((&lines * 42 + 41) / 82)
++exe 'vert 7resize ' . ((&columns * 187 + 138) / 276)
++argglobal
++vnoremap <buffer> <silent> [" :exe "normal! gv"|call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")
++nnoremap <buffer> <silent> [" :call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")
++vnoremap <buffer> <silent> [] m':exe "normal! gv"|call search('^\s*endf*\%[unction]\>', "bW")
++nnoremap <buffer> <silent> [] m':call search('^\s*endf*\%[unction]\>', "bW")
++vnoremap <buffer> <silent> [[ m':exe "normal! gv"|call search('^\s*fu\%[nction]\>', "bW")
++nnoremap <buffer> <silent> [[ m':call search('^\s*fu\%[nction]\>', "bW")
++vnoremap <buffer> <silent> ]" :exe "normal! gv"|call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")
++nnoremap <buffer> <silent> ]" :call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")
++vnoremap <buffer> <silent> ][ m':exe "normal! gv"|call search('^\s*endf*\%[unction]\>', "W")
++nnoremap <buffer> <silent> ][ m':call search('^\s*endf*\%[unction]\>', "W")
++vnoremap <buffer> <silent> ]] m':exe "normal! gv"|call search('^\s*fu\%[nction]\>', "W")
++nnoremap <buffer> <silent> ]] m':call search('^\s*fu\%[nction]\>', "W")
++setlocal keymap=
++setlocal noarabic
++setlocal autoindent
++setlocal backupcopy=
++setlocal nobinary
++setlocal nobreakindent
++setlocal breakindentopt=
++setlocal bufhidden=
++setlocal buflisted
++setlocal buftype=
++setlocal nocindent
++setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
++setlocal cinoptions=
++setlocal cinwords=if,else,while,do,for,switch
++setlocal colorcolumn=
++setlocal comments=sO:\"\ -,mO:\"\ \ ,eO:\"\",:\"
++setlocal commentstring=\"%s
++setlocal complete=.,w,b,u,t
++setlocal concealcursor=
++setlocal conceallevel=0
++setlocal completefunc=
++setlocal nocopyindent
++setlocal nocursorbind
++setlocal nocursorcolumn
++setlocal nocursorline
++setlocal define=
++setlocal dictionary=
++setlocal nodiff
++setlocal equalprg=
++setlocal errorformat=
++setlocal expandtab
++if &filetype != 'vim'
++setlocal filetype=vim
++endif
++setlocal nofixendofline
++setlocal foldcolumn=0
++setlocal foldenable
++setlocal foldexpr=0
++setlocal foldignore=#
++setlocal foldlevel=0
++setlocal foldmarker={{{,}}}
++setlocal foldmethod=manual
++setlocal foldminlines=1
++setlocal foldnestmax=20
++setlocal foldtext=foldtext()
++setlocal formatexpr=
++setlocal formatoptions=jcroql
++setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
++setlocal formatprg=
++setlocal grepprg=
++setlocal iminsert=0
++setlocal imsearch=0
++setlocal include=
++setlocal includeexpr=
++setlocal indentexpr=GetVimIndent()
++setlocal indentkeys=0{,0},:,0#,!^F,o,O,e,=end,=else,=cat,=fina,=END,0\\
++setlocal noinfercase
++setlocal iskeyword=@,48-57,_,192-255,#
++setlocal keywordprg=
++setlocal nolinebreak
++setlocal nolisp
++setlocal lispwords=
++setlocal nolist
++setlocal makeprg=
++setlocal matchpairs=(:),{:},[:]
++setlocal nomodeline
++setlocal modifiable
++setlocal nrformats=bin,hex
++setlocal number
++setlocal numberwidth=4
++setlocal omnifunc=
++setlocal path=
++setlocal nopreserveindent
++setlocal nopreviewwindow
++setlocal quoteescape=\\
++setlocal noreadonly
++setlocal norelativenumber
++setlocal norightleft
++setlocal rightleftcmd=search
++setlocal scrollback=-1
++setlocal noscrollbind
++setlocal shiftwidth=2
++setlocal signcolumn=auto
++setlocal nosmartindent
++setlocal softtabstop=2
++setlocal spell
++setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
++setlocal spellfile=
++setlocal spelllang=en
++setlocal statusline=
++setlocal suffixesadd=
++setlocal swapfile
++setlocal synmaxcol=3000
++if &syntax != 'vim'
++setlocal syntax=vim
++endif
++setlocal tabstop=2
++setlocal tagcase=
++setlocal tags=~/src/vim-python-parso-syntax.git/.tags,.tags
++setlocal textwidth=78
++setlocal thesaurus=
++setlocal undofile
++setlocal undolevels=-123456
++setlocal nowinfixheight
++setlocal nowinfixwidth
++setlocal wrap
++setlocal wrapmargin=0
++silent! normal! zE
++let s:l = 20 - ((9 * winheight(0) + 17) / 35)
++if s:l < 1 | let s:l = 1 | endif
++exe s:l
++normal! zt
++20
++normal! 05|
++lcd ~/src/vim-python-parso-syntax.git
++wincmd w
++argglobal
++edit ~/dotfiles/vim-spacetea/python/spacetea/plugin.py
++let s:cpo_save=&cpo
++set cpo&vim
++inoremap <buffer> <expr> <C-Space> jedi#complete_string(0)
++imap <buffer> <Nul> <C-Space>
++nnoremap <buffer>  h :call jedi#show_documentation()
++nnoremap <buffer>  u :call jedi#usages()
++nnoremap <buffer>  r :call jedi#rename()
++nnoremap <buffer>  d :call jedi#goto()
++nnoremap <buffer>  3 :call multipython#printversions()
++nnoremap <buffer>  2 :call multipython#printversions()
++nnoremap <buffer> \3 :call multipython#togglepy3()
++nnoremap <buffer> \2 :call multipython#togglepy2()
++vnoremap <buffer> \\r :call jedi#rename_visual()
++nnoremap <buffer> \\r :call jedi#rename()
++nnoremap <buffer> \\n :call jedi#usages()
++nnoremap <buffer> \\g :call jedi#goto_assignments()
++nnoremap <buffer> \\d :call jedi#goto()
++snoremap <buffer> <expr> <C-Space> 'c'.jedi#complete_string(0)
++smap <buffer> <Nul> <C-Space>
++inoremap <buffer> ,T raise Exception("TODO: finish this")  # noqaF"hvFfo
++inoremap <buffer> <silent> . .=jedi#complete_string(1)
++let &cpo=s:cpo_save
++unlet s:cpo_save
++setlocal keymap=
++setlocal noarabic
++setlocal autoindent
++setlocal backupcopy=
++setlocal nobinary
++setlocal nobreakindent
++setlocal breakindentopt=
++setlocal bufhidden=
++setlocal buflisted
++setlocal buftype=
++setlocal nocindent
++setlocal cinkeys=0{,0},0),:,!^F,o,O,e
++setlocal cinoptions=
++setlocal cinwords=if,else,while,do,for,switch
++setlocal colorcolumn=+2
++setlocal comments=b:#,fb:-
++setlocal commentstring=#\ %s
++setlocal complete=.,w,b,u,t
++setlocal concealcursor=
++setlocal conceallevel=0
++setlocal completefunc=
++setlocal nocopyindent
++setlocal nocursorbind
++setlocal nocursorcolumn
++setlocal nocursorline
++setlocal define=
++setlocal dictionary=
++setlocal nodiff
++setlocal equalprg=
++setlocal errorformat=
++setlocal expandtab
++if &filetype != 'python'
++setlocal filetype=python
++endif
++setlocal nofixendofline
++setlocal foldcolumn=1
++setlocal foldenable
++setlocal foldexpr=0
++setlocal foldignore=#
++setlocal foldlevel=4
++setlocal foldmarker={{{,}}}
++setlocal foldmethod=indent
++setlocal foldminlines=1
++setlocal foldnestmax=20
++setlocal foldtext=foldtext()
++setlocal formatexpr=
++setlocal formatoptions=croqlj
++setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
++setlocal formatprg=
++setlocal grepprg=
++setlocal iminsert=0
++setlocal imsearch=0
++setlocal include=^\\s*\\(from\\|import\\)
++setlocal includeexpr=substitute(v:fname,'\\.','/','g')
++setlocal indentexpr=GetPythonPEPIndent(v:lnum)
++setlocal indentkeys=!^F,o,O,<:>,0),0],0},=elif,=except
++setlocal noinfercase
++setlocal iskeyword=@,48-57,_,192-255
++setlocal keywordprg=pydoc
++setlocal nolinebreak
++setlocal nolisp
++setlocal lispwords=
++setlocal list
++setlocal makeprg=
++setlocal matchpairs=(:),{:},[:]
++setlocal nomodeline
++setlocal modifiable
++setlocal nrformats=bin,hex
++setlocal number
++setlocal numberwidth=4
++setlocal omnifunc=jedi#completions
++setlocal path=
++setlocal nopreserveindent
++setlocal nopreviewwindow
++setlocal quoteescape=\\
++setlocal noreadonly
++setlocal norelativenumber
++setlocal norightleft
++setlocal rightleftcmd=search
++setlocal scrollback=-1
++setlocal noscrollbind
++setlocal shiftwidth=4
++setlocal signcolumn=auto
++setlocal nosmartindent
++setlocal softtabstop=4
++setlocal spell
++setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
++setlocal spellfile=
++setlocal spelllang=en
++setlocal statusline=
++setlocal suffixesadd=.py
++setlocal swapfile
++setlocal synmaxcol=3000
++if &syntax != 'python'
++setlocal syntax=python
++endif
++setlocal tabstop=8
++setlocal tagcase=
++setlocal tags=~/dotfiles/.tags,.tags
++setlocal textwidth=99
++setlocal thesaurus=
++setlocal undofile
++setlocal undolevels=-123456
++setlocal nowinfixheight
++setlocal nowinfixwidth
++setlocal wrap
++setlocal wrapmargin=0
++57
++normal! zo
++let s:l = 182 - ((0 * winheight(0) + 0) / 1)
++if s:l < 1 | let s:l = 1 | endif
++exe s:l
++normal! zt
++182
++normal! 021|
++wincmd w
++argglobal
++edit ~/dotfiles/vim-spacetea/autoload/spacetea.vim
++vnoremap <buffer> <silent> [" :exe "normal! gv"|call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")
++nnoremap <buffer> <silent> [" :call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")
++vnoremap <buffer> <silent> [] m':exe "normal! gv"|call search('^\s*endf*\%[unction]\>', "bW")
++nnoremap <buffer> <silent> [] m':call search('^\s*endf*\%[unction]\>', "bW")
++vnoremap <buffer> <silent> [[ m':exe "normal! gv"|call search('^\s*fu\%[nction]\>', "bW")
++nnoremap <buffer> <silent> [[ m':call search('^\s*fu\%[nction]\>', "bW")
++vnoremap <buffer> <silent> ]" :exe "normal! gv"|call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")
++nnoremap <buffer> <silent> ]" :call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")
++vnoremap <buffer> <silent> ][ m':exe "normal! gv"|call search('^\s*endf*\%[unction]\>', "W")
++nnoremap <buffer> <silent> ][ m':call search('^\s*endf*\%[unction]\>', "W")
++vnoremap <buffer> <silent> ]] m':exe "normal! gv"|call search('^\s*fu\%[nction]\>', "W")
++nnoremap <buffer> <silent> ]] m':call search('^\s*fu\%[nction]\>', "W")
++setlocal keymap=
++setlocal noarabic
++setlocal autoindent
++setlocal backupcopy=
++setlocal nobinary
++setlocal nobreakindent
++setlocal breakindentopt=
++setlocal bufhidden=
++setlocal buflisted
++setlocal buftype=
++setlocal nocindent
++setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
++setlocal cinoptions=
++setlocal cinwords=if,else,while,do,for,switch
++setlocal colorcolumn=
++setlocal comments=sO:\"\ -,mO:\"\ \ ,eO:\"\",:\"
++setlocal commentstring=\"%s
++setlocal complete=.,w,b,u,t
++setlocal concealcursor=
++setlocal conceallevel=0
++setlocal completefunc=
++setlocal nocopyindent
++setlocal nocursorbind
++setlocal nocursorcolumn
++setlocal nocursorline
++setlocal define=
++setlocal dictionary=
++setlocal nodiff
++setlocal equalprg=
++setlocal errorformat=
++setlocal expandtab
++if &filetype != 'vim'
++setlocal filetype=vim
++endif
++setlocal nofixendofline
++setlocal foldcolumn=0
++setlocal foldenable
++setlocal foldexpr=0
++setlocal foldignore=#
++setlocal foldlevel=0
++setlocal foldmarker={{{,}}}
++setlocal foldmethod=manual
++setlocal foldminlines=1
++setlocal foldnestmax=20
++setlocal foldtext=foldtext()
++setlocal formatexpr=
++setlocal formatoptions=jcroql
++setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
++setlocal formatprg=
++setlocal grepprg=
++setlocal iminsert=0
++setlocal imsearch=0
++setlocal include=
++setlocal includeexpr=
++setlocal indentexpr=GetVimIndent()
++setlocal indentkeys=0{,0},:,0#,!^F,o,O,e,=end,=else,=cat,=fina,=END,0\\
++setlocal noinfercase
++setlocal iskeyword=@,48-57,_,192-255,#
++setlocal keywordprg=
++setlocal nolinebreak
++setlocal nolisp
++setlocal lispwords=
++setlocal nolist
++setlocal makeprg=
++setlocal matchpairs=(:),{:},[:]
++setlocal nomodeline
++setlocal modifiable
++setlocal nrformats=bin,hex
++setlocal number
++setlocal numberwidth=4
++setlocal omnifunc=
++setlocal path=
++setlocal nopreserveindent
++setlocal nopreviewwindow
++setlocal quoteescape=\\
++setlocal noreadonly
++setlocal norelativenumber
++setlocal norightleft
++setlocal rightleftcmd=search
++setlocal scrollback=-1
++setlocal noscrollbind
++setlocal shiftwidth=2
++setlocal signcolumn=auto
++setlocal nosmartindent
++setlocal softtabstop=2
++setlocal spell
++setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
++setlocal spellfile=
++setlocal spelllang=en
++setlocal statusline=
++setlocal suffixesadd=
++setlocal swapfile
++setlocal synmaxcol=3000
++if &syntax != 'vim'
++setlocal syntax=vim
++endif
++setlocal tabstop=2
++setlocal tagcase=
++setlocal tags=~/dotfiles/.tags,.tags
++setlocal textwidth=78
++setlocal thesaurus=
++setlocal undofile
++setlocal undolevels=-123456
++setlocal nowinfixheight
++setlocal nowinfixwidth
++setlocal wrap
++setlocal wrapmargin=0
++silent! normal! zE
++let s:l = 21 - ((20 * winheight(0) + 21) / 42)
++if s:l < 1 | let s:l = 1 | endif
++exe s:l
++normal! zt
++21
++normal! 015|
++lcd ~/src/vim-python-parso-syntax.git
++wincmd w
++argglobal
++edit ~/src/vim-python-parso-syntax.git/npps.py
++let s:cpo_save=&cpo
++set cpo&vim
++inoremap <buffer> <expr> <C-Space> jedi#complete_string(0)
++imap <buffer> <Nul> <C-Space>
++nnoremap <buffer>  h :call jedi#show_documentation()
++nnoremap <buffer>  u :call jedi#usages()
++nnoremap <buffer>  r :call jedi#rename()
++nnoremap <buffer>  d :call jedi#goto()
++nnoremap <buffer>  3 :call multipython#printversions()
++nnoremap <buffer>  2 :call multipython#printversions()
++nnoremap <buffer> \3 :call multipython#togglepy3()
++nnoremap <buffer> \2 :call multipython#togglepy2()
++xnoremap <buffer> \\r :call jedi#rename_visual()
++nnoremap <buffer> \\r :call jedi#rename()
++nnoremap <buffer> \\n :call jedi#usages()
++nnoremap <buffer> \\g :call jedi#goto_assignments()
++nnoremap <buffer> \\d :call jedi#goto()
++snoremap <buffer> <expr> <C-Space> 'c'.jedi#complete_string(0)
++smap <buffer> <Nul> <C-Space>
++inoremap <buffer> ,T raise Exception("TODO: finish this")  # noqaF"hvFfo
++inoremap <buffer> <silent> . .=jedi#complete_string(1)
++let &cpo=s:cpo_save
++unlet s:cpo_save
++setlocal keymap=
++setlocal noarabic
++setlocal autoindent
++setlocal backupcopy=
++setlocal nobinary
++setlocal nobreakindent
++setlocal breakindentopt=
++setlocal bufhidden=
++setlocal buflisted
++setlocal buftype=
++setlocal nocindent
++setlocal cinkeys=0{,0},0),:,!^F,o,O,e
++setlocal cinoptions=
++setlocal cinwords=if,else,while,do,for,switch
++setlocal colorcolumn=+2
++setlocal comments=b:#,fb:-
++setlocal commentstring=#\ %s
++setlocal complete=.,w,b,u,t
++setlocal concealcursor=
++setlocal conceallevel=0
++setlocal completefunc=
++setlocal nocopyindent
++setlocal nocursorbind
++setlocal nocursorcolumn
++setlocal nocursorline
++setlocal define=
++setlocal dictionary=
++setlocal nodiff
++setlocal equalprg=
++setlocal errorformat=
++setlocal expandtab
++if &filetype != 'python'
++setlocal filetype=python
++endif
++setlocal nofixendofline
++setlocal foldcolumn=1
++setlocal foldenable
++setlocal foldexpr=0
++setlocal foldignore=#
++setlocal foldlevel=12
++setlocal foldmarker={{{,}}}
++setlocal foldmethod=indent
++setlocal foldminlines=1
++setlocal foldnestmax=20
++setlocal foldtext=foldtext()
++setlocal formatexpr=
++setlocal formatoptions=croqlj
++setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
++setlocal formatprg=
++setlocal grepprg=
++setlocal iminsert=0
++setlocal imsearch=0
++setlocal include=^\\s*\\(from\\|import\\)
++setlocal includeexpr=substitute(v:fname,'\\.','/','g')
++setlocal indentexpr=GetPythonPEPIndent(v:lnum)
++setlocal indentkeys=!^F,o,O,<:>,0),0],0},=elif,=except
++setlocal noinfercase
++setlocal iskeyword=@,48-57,_,192-255
++setlocal keywordprg=pydoc
++setlocal nolinebreak
++setlocal nolisp
++setlocal lispwords=
++setlocal list
++setlocal makeprg=
++setlocal matchpairs=(:),{:},[:]
++setlocal nomodeline
++setlocal modifiable
++setlocal nrformats=bin,hex
++setlocal number
++setlocal numberwidth=5
++setlocal omnifunc=jedi#completions
++setlocal path=
++setlocal nopreserveindent
++setlocal nopreviewwindow
++setlocal quoteescape=\\
++setlocal noreadonly
++setlocal norelativenumber
++setlocal norightleft
++setlocal rightleftcmd=search
++setlocal scrollback=-1
++setlocal noscrollbind
++setlocal shiftwidth=4
++setlocal signcolumn=auto
++setlocal nosmartindent
++setlocal softtabstop=4
++setlocal spell
++setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
++setlocal spellfile=
++setlocal spelllang=en
++setlocal statusline=
++setlocal suffixesadd=.py
++setlocal swapfile
++setlocal synmaxcol=3000
++if &syntax != 'python'
++setlocal syntax=python
++endif
++setlocal tabstop=8
++setlocal tagcase=
++setlocal tags=~/src/vim-python-parso-syntax.git/.tags,.tags
++setlocal textwidth=79
++setlocal thesaurus=
++setlocal undofile
++setlocal undolevels=-123456
++setlocal nowinfixheight
++setlocal nowinfixwidth
++setlocal wrap
++setlocal wrapmargin=0
++17
++normal! zo
++32
++normal! zo
++46
++normal! zo
++77
++normal! zo
++86
++normal! zo
++199
++normal! zo
++200
++normal! zo
++225
++normal! zo
++let s:l = 96 - ((12 * winheight(0) + 9) / 18)
++if s:l < 1 | let s:l = 1 | endif
++exe s:l
++normal! zt
++96
++normal! 013|
++wincmd w
++argglobal
++edit ~/src/vim-python-parso-syntax.git/test.py
++let s:cpo_save=&cpo
++set cpo&vim
++inoremap <buffer> <expr> <C-Space> jedi#complete_string(0)
++imap <buffer> <Nul> <C-Space>
++nnoremap <buffer>  h :call jedi#show_documentation()
++nnoremap <buffer>  u :call jedi#usages()
++nnoremap <buffer>  r :call jedi#rename()
++nnoremap <buffer>  d :call jedi#goto()
++nnoremap <buffer>  3 :call multipython#printversions()
++nnoremap <buffer>  2 :call multipython#printversions()
++nnoremap <buffer> \3 :call multipython#togglepy3()
++nnoremap <buffer> \2 :call multipython#togglepy2()
++xnoremap <buffer> \\r :call jedi#rename_visual()
++nnoremap <buffer> \\r :call jedi#rename()
++nnoremap <buffer> \\n :call jedi#usages()
++nnoremap <buffer> \\g :call jedi#goto_assignments()
++nnoremap <buffer> \\d :call jedi#goto()
++snoremap <buffer> <expr> <C-Space> 'c'.jedi#complete_string(0)
++smap <buffer> <Nul> <C-Space>
++inoremap <buffer> ,T raise Exception("TODO: finish this")  # noqaF"hvFfo
++inoremap <buffer> <silent> . .=jedi#complete_string(1)
++let &cpo=s:cpo_save
++unlet s:cpo_save
++setlocal keymap=
++setlocal noarabic
++setlocal autoindent
++setlocal backupcopy=
++setlocal nobinary
++setlocal nobreakindent
++setlocal breakindentopt=
++setlocal bufhidden=
++setlocal buflisted
++setlocal buftype=
++setlocal nocindent
++setlocal cinkeys=0{,0},0),:,!^F,o,O,e
++setlocal cinoptions=
++setlocal cinwords=if,else,while,do,for,switch
++setlocal colorcolumn=+2
++setlocal comments=b:#,fb:-
++setlocal commentstring=#\ %s
++setlocal complete=.,w,b,u,t
++setlocal concealcursor=
++setlocal conceallevel=0
++setlocal completefunc=
++setlocal nocopyindent
++setlocal nocursorbind
++setlocal nocursorcolumn
++setlocal nocursorline
++setlocal define=
++setlocal dictionary=
++setlocal nodiff
++setlocal equalprg=
++setlocal errorformat=
++setlocal expandtab
++if &filetype != 'python'
++setlocal filetype=python
++endif
++setlocal nofixendofline
++setlocal foldcolumn=1
++setlocal foldenable
++setlocal foldexpr=0
++setlocal foldignore=#
++setlocal foldlevel=0
++setlocal foldmarker={{{,}}}
++setlocal foldmethod=indent
++setlocal foldminlines=1
++setlocal foldnestmax=20
++setlocal foldtext=foldtext()
++setlocal formatexpr=
++setlocal formatoptions=croqlj
++setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
++setlocal formatprg=
++setlocal grepprg=
++setlocal iminsert=0
++setlocal imsearch=0
++setlocal include=^\\s*\\(from\\|import\\)
++setlocal includeexpr=substitute(v:fname,'\\.','/','g')
++setlocal indentexpr=GetPythonPEPIndent(v:lnum)
++setlocal indentkeys=!^F,o,O,<:>,0),0],0},=elif,=except
++setlocal noinfercase
++setlocal iskeyword=@,48-57,_,192-255
++setlocal keywordprg=pydoc
++setlocal nolinebreak
++setlocal nolisp
++setlocal lispwords=
++setlocal list
++setlocal makeprg=
++setlocal matchpairs=(:),{:},[:]
++setlocal nomodeline
++setlocal modifiable
++setlocal nrformats=bin,hex
++setlocal number
++setlocal numberwidth=4
++setlocal omnifunc=jedi#completions
++setlocal path=
++setlocal nopreserveindent
++setlocal nopreviewwindow
++setlocal quoteescape=\\
++setlocal noreadonly
++setlocal norelativenumber
++setlocal norightleft
++setlocal rightleftcmd=search
++setlocal scrollback=-1
++setlocal noscrollbind
++setlocal shiftwidth=4
++setlocal signcolumn=auto
++setlocal nosmartindent
++setlocal softtabstop=4
++setlocal spell
++setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
++setlocal spellfile=
++setlocal spelllang=en
++setlocal statusline=
++setlocal suffixesadd=.py
++setlocal swapfile
++setlocal synmaxcol=3000
++if &syntax != 'python'
++setlocal syntax=python
++endif
++setlocal tabstop=8
++setlocal tagcase=
++setlocal tags=~/src/vim-python-parso-syntax.git/.tags,.tags
++setlocal textwidth=79
++setlocal thesaurus=
++setlocal undofile
++setlocal undolevels=-123456
++setlocal nowinfixheight
++setlocal nowinfixwidth
++setlocal wrap
++setlocal wrapmargin=0
++let s:l = 8 - ((7 * winheight(0) + 4) / 8)
++if s:l < 1 | let s:l = 1 | endif
++exe s:l
++normal! zt
++8
++normal! 010|
++wincmd w
++argglobal
++enew
++file ~/src/vim-python-parso-syntax.git/\ python3.4\ test.py
++setlocal keymap=
++setlocal noarabic
++setlocal autoindent
++setlocal backupcopy=
++setlocal nobinary
++setlocal nobreakindent
++setlocal breakindentopt=
++setlocal bufhidden=wipe
++setlocal buflisted
++setlocal buftype=nofile
++setlocal nocindent
++setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
++setlocal cinoptions=
++setlocal cinwords=if,else,while,do,for,switch
++setlocal colorcolumn=
++setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
++setlocal commentstring=/*%s*/
++setlocal complete=.,w,b,u,t
++setlocal concealcursor=
++setlocal conceallevel=0
++setlocal completefunc=
++setlocal nocopyindent
++setlocal nocursorbind
++setlocal nocursorcolumn
++setlocal nocursorline
++setlocal define=
++setlocal dictionary=
++setlocal nodiff
++setlocal equalprg=
++setlocal errorformat=
++setlocal expandtab
++if &filetype != 'shell-command'
++setlocal filetype=shell-command
++endif
++setlocal nofixendofline
++setlocal foldcolumn=0
++setlocal foldenable
++setlocal foldexpr=0
++setlocal foldignore=#
++setlocal foldlevel=0
++setlocal foldmarker={{{,}}}
++setlocal foldmethod=manual
++setlocal foldminlines=1
++setlocal foldnestmax=20
++setlocal foldtext=foldtext()
++setlocal formatexpr=
++setlocal formatoptions=tcqj
++setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
++setlocal formatprg=
++setlocal grepprg=
++setlocal iminsert=0
++setlocal imsearch=0
++setlocal include=
++setlocal includeexpr=
++setlocal indentexpr=
++setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
++setlocal noinfercase
++setlocal iskeyword=@,48-57,_,192-255
++setlocal keywordprg=
++setlocal nolinebreak
++setlocal nolisp
++setlocal lispwords=
++setlocal nolist
++setlocal makeprg=
++setlocal matchpairs=(:),{:},[:]
++setlocal nomodeline
++setlocal modifiable
++setlocal nrformats=bin,hex
++setlocal number
++setlocal numberwidth=4
++setlocal omnifunc=
++setlocal path=
++setlocal nopreserveindent
++setlocal nopreviewwindow
++setlocal quoteescape=\\
++setlocal noreadonly
++setlocal norelativenumber
++setlocal norightleft
++setlocal rightleftcmd=search
++setlocal scrollback=-1
++setlocal noscrollbind
++setlocal shiftwidth=4
++setlocal signcolumn=auto
++setlocal nosmartindent
++setlocal softtabstop=4
++setlocal spell
++setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
++setlocal spellfile=
++setlocal spelllang=en
++setlocal statusline=
++setlocal suffixesadd=
++setlocal noswapfile
++setlocal synmaxcol=3000
++if &syntax != 'shell-command'
++setlocal syntax=shell-command
++endif
++setlocal tabstop=4
++setlocal tagcase=
++setlocal tags=
++setlocal textwidth=0
++setlocal thesaurus=
++setlocal undofile
++setlocal undolevels=-123456
++setlocal nowinfixheight
++setlocal nowinfixwidth
++setlocal wrap
++setlocal wrapmargin=0
++wincmd w
++argglobal
++edit ~/dotfiles/HOMELY.py
++let s:cpo_save=&cpo
++set cpo&vim
++inoremap <buffer> <expr> <C-Space> jedi#complete_string(0)
++imap <buffer> <Nul> <C-Space>
++nnoremap <buffer>  h :call jedi#show_documentation()
++nnoremap <buffer>  u :call jedi#usages()
++nnoremap <buffer>  r :call jedi#rename()
++nnoremap <buffer>  d :call jedi#goto()
++nnoremap <buffer>  3 :call multipython#printversions()
++nnoremap <buffer>  2 :call multipython#printversions()
++nnoremap <buffer> \3 :call multipython#togglepy3()
++nnoremap <buffer> \2 :call multipython#togglepy2()
++vnoremap <buffer> \\r :call jedi#rename_visual()
++nnoremap <buffer> \\r :call jedi#rename()
++nnoremap <buffer> \\n :call jedi#usages()
++nnoremap <buffer> \\g :call jedi#goto_assignments()
++nnoremap <buffer> \\d :call jedi#goto()
++snoremap <buffer> <expr> <C-Space> 'c'.jedi#complete_string(0)
++smap <buffer> <Nul> <C-Space>
++inoremap <buffer> ,T raise Exception("TODO: finish this")  # noqaF"hvFfo
++inoremap <buffer> <silent> . .=jedi#complete_string(1)
++let &cpo=s:cpo_save
++unlet s:cpo_save
++setlocal keymap=
++setlocal noarabic
++setlocal autoindent
++setlocal backupcopy=
++setlocal nobinary
++setlocal nobreakindent
++setlocal breakindentopt=
++setlocal bufhidden=
++setlocal buflisted
++setlocal buftype=
++setlocal nocindent
++setlocal cinkeys=0{,0},0),:,!^F,o,O,e
++setlocal cinoptions=
++setlocal cinwords=if,else,while,do,for,switch
++setlocal colorcolumn=+2
++setlocal comments=b:#,fb:-
++setlocal commentstring=#\ %s
++setlocal complete=.,w,b,u,t
++setlocal concealcursor=
++setlocal conceallevel=0
++setlocal completefunc=
++setlocal nocopyindent
++setlocal nocursorbind
++setlocal nocursorcolumn
++setlocal nocursorline
++setlocal define=
++setlocal dictionary=
++setlocal nodiff
++setlocal equalprg=
++setlocal errorformat=
++setlocal expandtab
++if &filetype != 'python'
++setlocal filetype=python
++endif
++setlocal nofixendofline
++setlocal foldcolumn=1
++setlocal foldenable
++setlocal foldexpr=0
++setlocal foldignore=#
++setlocal foldlevel=9
++setlocal foldmarker={{{,}}}
++setlocal foldmethod=indent
++setlocal foldminlines=1
++setlocal foldnestmax=20
++setlocal foldtext=foldtext()
++setlocal formatexpr=
++setlocal formatoptions=croqlj
++setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
++setlocal formatprg=
++setlocal grepprg=
++setlocal iminsert=0
++setlocal imsearch=0
++setlocal include=^\\s*\\(from\\|import\\)
++setlocal includeexpr=substitute(v:fname,'\\.','/','g')
++setlocal indentexpr=GetPythonPEPIndent(v:lnum)
++setlocal indentkeys=!^F,o,O,<:>,0),0],0},=elif,=except
++setlocal noinfercase
++setlocal iskeyword=@,48-57,_,192-255
++setlocal keywordprg=pydoc
++setlocal nolinebreak
++setlocal nolisp
++setlocal lispwords=
++setlocal list
++setlocal makeprg=
++setlocal matchpairs=(:),{:},[:]
++setlocal nomodeline
++setlocal modifiable
++setlocal nrformats=bin,hex
++setlocal number
++setlocal numberwidth=4
++setlocal omnifunc=jedi#completions
++setlocal path=
++setlocal nopreserveindent
++setlocal nopreviewwindow
++setlocal quoteescape=\\
++setlocal noreadonly
++setlocal norelativenumber
++setlocal norightleft
++setlocal rightleftcmd=search
++setlocal scrollback=-1
++setlocal noscrollbind
++setlocal shiftwidth=4
++setlocal signcolumn=auto
++setlocal nosmartindent
++setlocal softtabstop=4
++setlocal spell
++setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
++setlocal spellfile=
++setlocal spelllang=en
++setlocal statusline=
++setlocal suffixesadd=.py
++setlocal swapfile
++setlocal synmaxcol=3000
++if &syntax != 'python'
++setlocal syntax=python
++endif
++setlocal tabstop=8
++setlocal tagcase=
++setlocal tags=~/dotfiles/.tags,.tags
++setlocal textwidth=0
++setlocal thesaurus=
++setlocal undofile
++setlocal undolevels=-123456
++setlocal nowinfixheight
++setlocal nowinfixwidth
++setlocal wrap
++setlocal wrapmargin=0
++let s:l = 18 - ((17 * winheight(0) + 21) / 42)
++if s:l < 1 | let s:l = 1 | endif
++exe s:l
++normal! zt
++18
++normal! 065|
++wincmd w
++6wincmd w
++exe '1resize ' . ((&lines * 35 + 41) / 82)
++exe 'vert 1resize ' . ((&columns * 88 + 138) / 276)
++exe '2resize ' . ((&lines * 1 + 41) / 82)
++exe 'vert 2resize ' . ((&columns * 88 + 138) / 276)
++exe '3resize ' . ((&lines * 42 + 41) / 82)
++exe 'vert 3resize ' . ((&columns * 88 + 138) / 276)
++exe '4resize ' . ((&lines * 18 + 41) / 82)
++exe 'vert 4resize ' . ((&columns * 187 + 138) / 276)
++exe '5resize ' . ((&lines * 8 + 41) / 82)
++exe 'vert 5resize ' . ((&columns * 187 + 138) / 276)
++exe '6resize ' . ((&lines * 9 + 41) / 82)
++exe 'vert 6resize ' . ((&columns * 187 + 138) / 276)
++exe '7resize ' . ((&lines * 42 + 41) / 82)
++exe 'vert 7resize ' . ((&columns * 187 + 138) / 276)
++tabnext 1
++if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
++  silent exe 'bwipe ' . s:wipebuf
++endif
++unlet! s:wipebuf
++set winheight=1 winwidth=88 winminheight=1 winminwidth=15 shortmess=filnxtToO
++let s:sx = expand("<sfile>:p:r")."x.vim"
++if file_readable(s:sx)
++  exe "source " . fnameescape(s:sx)
++endif
++let &so = s:so_save | let &siso = s:siso_save
++doautoall SessionLoadPost
++unlet SessionLoad
++" vim: set ft=vim :
+diff --git a/npps.py b/npps.py
+new file mode 100755
+index 0000000..5f0e699
+--- /dev/null
++++ b/npps.py
+@@ -0,0 +1,362 @@
++#!/usr/bin/env python3
++from collections import defaultdict
++from functools import partial
++
++import parso
++from parso.python.tree import Name
++from parso.tree import BaseNode
++
++import neovim
++
++SOURCE_IDS = {}
++BUFFERS = {}
++
++
++class PushInterrupted(Exception):
++    pass
++
++
++class BufferInfo(object):
++    def __init__(self, nbuf, bufnr):
++        self.active = True
++        self.nbuf = nbuf
++        self.bufnr = bufnr
++        self.lines = []
++        self.pending = []
++        self.pushing = False
++        self.pushbroken = False
++        self.hlbyline = {}
++        self.hlqueue = []
++        self.expecting_start = True
++        self.lasttick = None
++
++    def flaglines(self, firstline, numremoved, numadded):
++        # lets say that firstline is 1 (line 2), and we already have pending
++        # changes for lines 0,
++        # 1, 2, 3
++        # numremoved is 1, meaning that the line was DELETED
++        # deletebefore will be 2
++        deletebefore = firstline + numremoved
++        # numadded is 0, meaning shuffle is -1
++        shuffle = numadded - numremoved
++        # this means every linenr BEFORE 1 stays the same,
++        # every linenr >= deletebefore needs to be shuffled by -1, and anything
++        # else disappears
++
++        # SCENARIO B:
++        # firstline is 3 (line 4), numremoved is 1, numadded is 1
++        # shuffle will be 0
++        # deletebefore will be 3
++
++        newpending = list(range(firstline, firstline + numadded))
++        for linenr in self.pending:
++            if linenr < firstline:
++                # every pending line before line 1 stays the same
++                newpending.append(linenr)
++            elif linenr >= deletebefore:
++                # the pending changes for lines 2 and 3 now become pending
++                # changes for lines 1 and 2
++                newpending.append(linenr + shuffle)
++            else:
++                # the linenr falls between linenr and deletebefore, so we
++                # discard it (add it separately)
++                pass
++
++        self.pending = newpending
++
++    def dohighlights(self, nvim):
++        # if the tick has already changed, bail
++        if self.tick == self.lasttick:
++            with open('/tmp/x', 'a') as _f:  # TODO
++                _f.write('skip HL - tick already changed\n')  # noqa
++            return
++
++        # don't push highlights when we're already pushing highlights
++        assert not self.pushing
++
++        while self.active:
++            try:
++                self.pushing = True
++                self._push(nvim)
++                self.lasttick = self.tick
++                break
++            except PushInterrupted:
++                pass
++            finally:
++                self.pushing = False
++
++    def _push(self, nvim):
++        """
++        Work out the new highlights for the buffer and push them.
++
++        raises PushInterrupted if the buffer contents change before it's
++        finished.
++        """
++        with open('/tmp/x', 'a') as _f:  # TODO
++            _f.write('pushing highlights now ...')  # noqa
++        # if we don't have a sourceid, we need to get one now
++        sourceid = SOURCE_IDS.get(self.bufnr)
++        if sourceid is None:
++            sourceid = self.nbuf.api.add_highlight(0, 'Error',
++                                                   0, 1, 2)
++            self.nbuf.api.clear_highlight(sourceid, 0, -1)
++            SOURCE_IDS[self.bufnr] = sourceid
++            nvim.api.call_function('npps#set_source_id', [self.bufnr, sourceid])
++
++        # we have a list of 'pending' lines that have been changed ... but this
++        # really doesn't mean much because a change on a specific line may need
++        # to trigger a highlight change on a different line. Instead, we'll
++        # build up a big dict of what the highlights need to be per line, and
++        # then flush just the ones that have changed
++
++        new_highlights = self._get_highlights()
++        for linenr in range(len(self.lines)):
++            highlights = new_highlights.get(linenr, [])
++
++            # if highlights for this line haven't changed, skip it
++            if highlights != self.hlbyline.get(linenr):
++                # queue up new highlights that are needed
++                self.hlqueue.append((linenr, highlights))
++
++        # now push as many things off the queue as we can
++        while len(self.hlqueue):
++            linenr, highlights = self.hlqueue[0]
++
++            # add method calls to clear the highlighting on this line
++            trytick = self.tick
++            methods = [
++                # this will fail if the ticks aren't sync'd
++                ['nvim_eval',
++                 ['getbufvar(%d, "changedtick") == %d || nr2char()' % (self.bufnr, trytick)]],
++                # clear highlighting for the current line
++                ['nvim_buf_clear_highlight',
++                 [self.nbuf, sourceid, linenr, linenr + 1]]
++            ]
++
++            # add method calls that will highlight each of the things for this
++            # line
++            for group, start, end in highlights:
++                methods.append(['nvim_buf_add_highlight',
++                                [self.nbuf, sourceid, group,
++                                 linenr, start, end]])
++
++            # SO: the things that can happen suring call_atomic() are:
++            # - another LiveUpdate is received first.
++            #   - if this happens, we're ok because the call_atomic is going to
++            #     fail
++            assert not self.pushbroken
++
++            # so we try and apply all these method calls as a single atomic
++            # thing
++            retvals, errors = nvim.api.call_atomic(methods)
++
++            # if self.pushbroken has magically become True, that means we
++            # received a LiveUpdate while sending our highlights so we have to
++            # re-push highlighting for this buffer all over again
++            if self.pushbroken:
++                self.pushbroken = False
++                raise PushInterrupted()
++
++            if errors is not None:
++                # the first expr involving b:changedtick is the only one that
++                # should fail ...
++                assert errors[0] == 0, "Only the first api call should fail"
++                # so if the b:changedtick check failed, it means there is
++                # another LiveUpdate on the way with new buffer changes, so we
++                # stop trying to push changes and wait for the next LiveUpdate
++                return
++
++            # b:changedtick hadn't changed, so we can be certain that our
++            # HL push was done correctly, THEREFORE we can pop this line
++            self.hlbyline[linenr] = highlights
++            self.hlqueue.pop(0)
++
++        with open('/tmp/x', 'a') as _f:  # TODO
++            _f.write('DONE')  # noqa
++
++        return
++        raise Exception("TODO: push some highlights")  # noqa
++
++    def clear_highlight(self):
++        """
++        Reset any highlighting that has been added by us.
++        """
++        sourceid = SOURCE_IDS.get(self.bufnr)
++        if sourceid:
++            self.nbuf.api.clear_highlight(sourceid, 0, -1)
++
++    def _get_highlights(self):
++        """
++        Return a dict which tells neovim how to highlight each line
++        """
++        code = '\n'.join(self.lines)
++        grammar = parso.load_grammar(version='3.4')
++        m = grammar.parse(code=code)
++
++        # first, look for imports and find the things that are imported so we
++        # can highlight them correctly later
++        imp_builtin = set()
++        imp_other = set()
++
++        for imp in m.iter_imports():
++            # TODO: determine if the named module is a builtin or not
++            is_builtin = False
++
++            for name in imp.get_defined_names():
++                if is_builtin:
++                    imp_builtin.add(name.value)
++                else:
++                    imp_other.add(name.value)
++
++        scope = NameScope(imp_builtin, imp_other)
++
++        highlights = defaultdict(list)
++        self._add_highlights_from_node(highlights, scope, m)
++        return highlights
++
++    def _add_highlights_from_node(self, highlights, scope, node):
++        #from parso.python.tree import Module
++        if isinstance(node, Name):
++            # highlight the NAME if it is something in our Scope
++            word = node.value
++            if word in scope.builtins:
++                hlgroup = 'Function'
++            elif word in scope.imports:
++                hlgroup = 'Identifier'
++            else:
++                hlgroup = None
++            if hlgroup:
++                highlights[node.line - 1].append(
++                    (hlgroup, node.column, node.column + len(word)))
++
++        # recurse into children also
++        if isinstance(node, BaseNode):
++            for child in node.children:
++                self._add_highlights_from_node(highlights, scope, child)
++
++
++class NameScope:
++    def __init__(self, builtins, imports):
++        self.builtins = builtins
++        self.imports = imports
++
++
++def handle_request(nvim, name, args):
++    raise Exception("unexpected request {!r}: {!r}".format(name, args))
++
++
++def handle_notification(nvim, name, args):
++    if name == 'BufferSourceID':
++        bufnr, sourceid = args
++        assert bufnr not in SOURCE_IDS
++        SOURCE_IDS[bufnr] = sourceid
++        return
++
++    if name == 'AddBuffer':
++        assert len(args) == 1
++        bufnr = args[0]
++        buffer = nvim.buffers[bufnr]
++        BUFFERS[bufnr] = BufferInfo(buffer, bufnr)
++        try:
++            buffer.api.live_updates(True)
++        except:
++            raise Exception("Couldn't turn on live updates for buffer %d"
++                            % bufnr)
++        return
++
++    if name == 'RemoveBuffer':
++        assert len(args) == 1
++        bufnr = args[0]
++        assert bufnr in BUFFERS
++
++        # Just ask live updates to stop - this will be enough to disable all
++        # the syntax highlighting when that event comes through.
++        nvim.buffers[bufnr].api.live_updates(False)
++        return
++
++    if name == 'LiveUpdateStart':
++        buf, tick, lines, more = args
++        bufnr = buf.number
++        info = BUFFERS[bufnr]
++
++        # we should never get a LiveUpdateStart in the middle of a push
++        assert info.active
++        assert not info.pushing
++        assert info.expecting_start
++
++        info.tick = tick
++        info.lines += lines
++
++        if not more:
++            info.expecting_start = False
++
++            # now that we have the full buffer contents, we can do highlighting
++            info.dohighlights(nvim)
++        return
++
++    if name == 'LiveUpdateTick':
++        buf, tick = args
++        assert tick is not None
++        bufnr = buf.number
++        info = BUFFERS[bufnr]
++        info.tick = tick
++        # if we are part-way through pushing a HL change, mark it as broken
++        if info.pushing:
++            info.pushbroken = True
++        return
++
++    if name == 'LiveUpdate':
++        buf, tick, firstline, numreplaced, linedata = args
++        bufnr = buf.number
++        info = BUFFERS[bufnr]
++        # NOTE: 'inccommand' will cause a LiveUpdate to come through with
++        # b:changedtick of None ... this is because it updates the text
++        # which is displayed on screen, but doesn't actually update the
++        # buffer contents
++        if tick is not None:
++            info.tick = tick
++
++        if info.active:
++            # swap in the new line data
++            info.lines[firstline:firstline+numreplaced] = linedata
++            info.flaglines(firstline, numreplaced, len(linedata))
++
++        # if we're in the middle of pushing highlights when we get a LiveUpdate
++        # event, we have to mark that push as broken so that highlighting can
++        # be re-done
++        if info.pushing:
++            info.pushbroken = True
++        elif info.active:
++            # queue up a call to dohighlights()
++            callback = partial(info.dohighlights, nvim)
++            nvim._session.threadsafe_call(callback)
++        return
++
++    if name == 'LiveUpdateEnd':
++        bufnr = args[0].number
++        info = BUFFERS[bufnr]
++        # flush the buffer lines
++        info.active = False
++        info.lines = []
++        info.pending = []
++        info.hlbyline = {}
++        info.hlqueue = []
++        info.expecting_start = True
++        if info.pushing:
++            info.pushbroken = True
++        info.clear_highlight()
++        return
++
++    raise Exception("Unexpected event {!r}: {!r}".format(name, args))
++
++
++def main():
++    nvim = neovim.attach('stdio')
++
++    # set up RPC hooks
++    nvim.run_loop(partial(handle_request, nvim),
++                  partial(handle_notification, nvim))
++
++
++if __name__ == '__main__':
++    main()
+diff --git a/plugin/npps.vim b/plugin/npps.vim
+new file mode 100644
+index 0000000..5615b49
+--- /dev/null
++++ b/plugin/npps.vim
+@@ -0,0 +1,247 @@
++" we must have neovim's api_info() function to get started
++if ! exists('*api_info')
++  finish
++endif
++
++" check to see if the liveupdate feature is available
++if ! exists('s:has_liveupdate')
++  let s:has_liveupdate = 0
++  for s:func in api_info()["functions"]
++    if get(s:func, "name") == "nvim_buf_live_updates"
++      let s:has_liveupdate = 1
++      break
++    endif
++  endfor
++endif
++
++if ! s:has_liveupdate
++  "echomsg 'Liveupdate not available - NPPS disabled'
++  "finish
++endif
++
++let s:pyscript = expand('<sfile>:p:h:h').'/npps.py'
++" The source_id used for highlights. Needs to be preserved across restarts
++if ! exists('s:source_ids')
++  let s:source_ids = {}
++endif
++
++if exists('s:picked')
++  let g:picked = s:picked
++endif
++
++" TODO:
++" - set up autocmd on Syntax event which sends notification to [job] about a
++"   buffer that needs syntax highlighting
++" - some way to restart the background job if it dies?
++aug NPPS
++aug end
++au! NPPS Syntax * call <SID>CheckBuffer(str2nr(expand('<abuf>')), expand('<amatch>'))
++
++
++fun! npps#set_source_id(bufnr, source_id)
++  echomsg 'Setting source id'
++  let s:source_ids[a:bufnr] = a:source_id
++endfun
++
++
++fun! <SID>CheckJob(force_restart)
++  if exists('s:job_id')
++    let [l:status] = jobwait([s:job_id], 0)
++
++    if l:status == -1
++      " the job is currently running
++    elseif l:status == -2
++      " job was interrupted
++      unlet s:job_id
++    elseif l:status == -3
++      " job id isn't valid?
++      unlet s:job_id
++    elseif l:status >= 0
++      " job exited with code <l:status>
++      unlet s:job_id
++    endif
++  endif
++
++  if exists('s:job_id') && a:force_restart
++    call jobstop(s:job_id)
++    unlet s:job_id
++  endif
++
++  if ! exists('s:job_id')
++    " start the background job
++    let s:job_id = jobstart(['python3', s:pyscript], {"rpc": v:true, "on_stderr": function('<SID>StderrHandler')})
++
++    for [l:bufnr, l:source_id] in items(s:source_ids)
++      call rpcnotify(s:job_id, 'BufferSourceID', str2nr(l:bufnr), l:source_id)
++    endfor
++
++    " tell the job which buffers to look at
++    for l:bufnr in s:picked
++      call rpcnotify(s:job_id, 'AddBuffer', l:bufnr)
++    endfor
++  endif
++endfun
++
++fun! <SID>StderrHandler(job_id, data, event)
++  " TODO: we can't rely on this file being available
++  let l:logfile = expand(get(g:, 'npps_logfile', '~/.nvimlog'))
++  call writefile([printf('<stderr from job #%s>', a:job_id)], l:logfile, 'a')
++  call writefile(a:data, l:logfile, 'a')
++endfun
++
++fun! <SID>PickBuffers()
++  if exists('s:picked')
++    return
++  endif
++
++  " work out which buffers need syntax highlighting, put them in a list and
++  " get them ready
++  let l:picked = []
++  for l:bufnr in range(1, bufnr('$'))
++    if bufexists(l:bufnr) && <SID>ClearBuffer(l:bufnr)
++      call add(l:picked, l:bufnr)
++    endif
++  endfor
++  let s:picked = l:picked
++endfun
++
++fun! <SID>ClearBuffer(bufnr)
++  try
++    exe 'vert sbuf '.a:bufnr
++    if &l:syntax == 'pythonparso'
++      " clear syntax highlighting for this buffer
++      syn clear
++      return 1
++    endif
++  finally
++    close
++  endtry
++
++  return 0
++endfun
++
++fun! <SID>RemoveBufferNow(bufnr)
++  let l:idx = index(s:picked, a:bufnr)
++  if l:idx >= 0
++    call rpcnotify(s:job_id, 'RemoveBuffer', a:bufnr)
++    call remove(s:picked, l:idx)
++  endif
++endfun
++
++fun! <SID>CheckBuffer(bufnr, new_syntax)
++  let g:foo = [a:bufnr, a:new_syntax]
++  let l:active = (index(s:picked, a:bufnr) >= 0)
++
++  if a:new_syntax == 'pythonparso'
++    if ! l:active
++      call <SID>AddBufferNow(a:bufnr)
++    endif
++  elseif l:active
++    call <SID>RemoveBufferNow(a:bufnr)
++  endif
++endfun
++
++fun! <SID>AddBufferNow(bufnr)
++  " make sure background job is running
++  call <SID>CheckJob(0)
++
++  if <SID>ClearBuffer(a:bufnr)
++    " tell the job about this buffer
++    call rpcnotify(s:job_id, 'AddBuffer', a:bufnr)
++
++    " add it to our internal list
++    call add(s:picked, a:bufnr)
++  endif
++endfun
++
++" work out which buffers need to be highlighted by NPPS
++call <SID>PickBuffers()
++
++" TODO: set up autocmds to find new buffers
++
++" start up the background job now
++call <SID>CheckJob(1)
++
++
++finish
++
++
++
++com! -nargs=0 -bar VPPSPoll call <SID>PollAll()
++com! -nargs=0 -bar VPPSKill call <SID>KillAll()
++
++aug Hiword
++aug end
++au! BufWinEnter * call <SID>RegisterMe()
++
++let s:pyscript = expand('<sfile>:p:h:h').'/hiword.py'
++
++if ! exists('s:helpers')
++  let s:helpers = {}
++endif
++
++fun! <SID>AddWord(hlgroup, word)
++  if len(get(s:helpers, a:word, []))
++    " kill the old job
++    let l:oldjob = s:helpers[a:word][0]
++    call jobstop(l:oldjob)
++    call remove(s:helpers, a:word)
++  endif
++
++  " make sure the hlgroup is valid
++  if ! hlexists(a:hlgroup)
++    echoerr printf('Invalid hlgroup %s', a:hlgroup)
++    return
++  endif
++
++  let l:helper = 0
++  try
++    " start up a helper to handle this word
++    let l:helper = jobstart([s:pyscript], {"rpc": v:true})
++    let s:helpers[a:word] = [l:helper, a:hlgroup]
++    " tell the helper its word
++    call rpcrequest(l:helper, 'YourWord', a:word)
++    let l:response = rpcrequest(l:helper, 'YourHighlight', a:hlgroup)
++  catch
++    if l:helper
++      " kill the helper
++      silent! call jobstop(l:helper)
++      " remove the word from our dict
++      if len(get(s:helpers, a:word, []))
++        silent! call remove(s:helpers, a:word)
++      endif
++    endif
++    echoerr v:exception
++    return
++  endtry
++
++  call <SID>PollAll()
++endfun
++
++fun! <SID>PollAll()
++  " clean up any helpers that are no longer running
++  for l:word in keys(s:helpers)
++    let [l:helper, l:hlgroup] = s:helpers[l:word]
++    let l:state = jobwait([l:helper], 0)[0]
++    if l:state == -2 || l:state == -3
++      call remove(s:helpers, l:word)
++      echoerr printf("Helper %d for '%s' has died", l:helper, l:word)
++      return
++    endif
++  endfor
++endfun
++
++fun! <SID>RegisterMe()
++  for [l:helper, l:hlgroup] in values(s:helpers)
++    call rpcrequest(l:helper, 'AddBuffer', bufnr(""))
++  endfor
++endfun
++
++fun! <SID>KillAll()
++  " clean up all helpers
++  for l:word in keys(s:helpers)
++    let [l:helper, l:hlgroup] = s:helpers[l:word]
++    call remove(s:helpers, l:word)
++    call jobstop(l:helper)
++  endfor
++endfun
+diff --git a/test.py b/test.py
+new file mode 100644
+index 0000000..4cbe2f2
+--- /dev/null
++++ b/test.py
+@@ -0,0 +1,26 @@
++import pprint
++
++import parso.python.tree
++
++target = '/Users/phodge7/dotfiles/HOMELY.py'
++
++grammar = parso.load_grammar(version='3.4')
++m = grammar.parse(code=open(target).read())
++
++# first, look for imports and find the things that are imported so we can
++# highlight them correctly later
++imp_builtin = set()
++imp_other = set()
++
++for imp in m.iter_imports():
++    # TODO: determine if the named module is a builtin or not
++    is_builtin = False
++
++    for name in imp.get_defined_names():
++        if is_builtin:
++            imp_builtin.add(name.value)
++        else:
++            imp_other.add(name.value)
++
++
++print('imp_other = ' + pprint.pformat(imp_other))  # noqa TODO
